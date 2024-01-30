@@ -1,7 +1,7 @@
 import os
 
-input_path = os.path.join('.', 'input')
-output_path = os.path.join('.', 'output')
+input_path = os.path.join('..', 'input')
+output_path = os.path.join('..', 'output')
 for path in [input_path, output_path]:
     if not os.path.exists(path): 
         os.makedirs(path)  

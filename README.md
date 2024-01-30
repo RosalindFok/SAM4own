@@ -12,7 +12,10 @@ sam_vit_l_0b3195.pth：l表示large
 ## 配置环境
 `conda create --name SAM python=3.9`    <br>
 `source activate SAM`    <br>
-`pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple/` 
+`pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple/`     <br>
+`pip install torch==1.13.1 torchvision==0.14.1 --extra-index-url https://download.pytorch.org/whl/cu113 -i https://pypi.tuna.tsinghua.edu.cn/simple/`     <br>
+
+`pip install torchvision -i https://pypi.tuna.tsinghua.edu.cn/simple/`     <br>
 
 ## 下载模型
 `cd` into `SAM4own/meta_sam_checkpoints`   <br>
