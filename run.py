@@ -56,3 +56,5 @@ for path in [algnauts_2023_challenge_data_path, ds004496_path]:
         sam(coco_dir_path, path_join(ds004496_result_path, 'coco'))
         # imagenet_dir_path = path_join(stimuli_dir_path, 'imagenet')
 
+# Cleanup unnecessary files and optimize the local repository
+os.system('git gc --prune=now')
