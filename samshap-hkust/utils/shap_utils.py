@@ -1,17 +1,8 @@
 import torch
-from PIL import Image
-from torchvision import transforms
-from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
-import matplotlib.pyplot as plt
-import urllib
-from PIL import Image
-from torchvision import transforms
 import numpy as np
 from torch import nn
 from torch.utils.data import DataLoader
 import torch.optim as optim
-from tqdm import tqdm
-import pickle
 
 
 
