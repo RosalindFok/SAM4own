@@ -61,7 +61,7 @@ image_norm = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ]) ### imagenet std and mean
 
-def samshap(input_path : str, output_path : str):
+def run_samshap(input_path : str, output_path : str):
     img = Image.open(input_path).convert('RGB')
 
     predict_org = torch.nn.functional.softmax(model(test_preprocess(img).unsqueeze(0).cuda()),dim=1)
@@ -90,4 +90,4 @@ for dir in dirs:
     for  file, _ in zip(os.listdir(dir), tqdm(range(len(os.listdir(dir))))):
         source_file = os.path.join(dir, file)
         dest_file = os.path.join(save_path, file)
-        samshap(input_path=source_file, output_path=dest_file)
+        run_samshap(input_path=source_file, output_path=dest_file)
