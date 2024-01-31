@@ -85,7 +85,7 @@ imagenet_output_path = os.path.join(samshap_output_path, 'imagenet_output')
 check_path_or_create(imagenet_output_path)
 
 for dir in dirs:
-    save_path = os.path.join(imagenet_output_path, dir)
+    save_path = os.path.join(imagenet_output_path, dir.split(os.sep)[-1])
     check_path_or_create(save_path)
     for  file, _ in zip(os.listdir(dir), tqdm(range(len(os.listdir(dir))))):
         source_file = os.path.join(dir, file)
