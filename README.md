@@ -1,5 +1,6 @@
 # SAM4own
 Segment-Anything model for my own use
+
 ## 文件夹meta_sam_checkpoints
 sam_vit_b_01ec64.pth：b表示base(最小) <br>
 sam_vit_h_4b8939.pth：h表示huge(最大) <br>
