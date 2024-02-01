@@ -39,15 +39,16 @@ for path in [algnauts_2023_challenge_data_path, ds004496_path]:
     if path == algnauts_2023_challenge_data_path:
         subjs_dir_path = [path_join(algnauts_2023_challenge_data_path, d) for d in os.listdir(path) if os.path.isdir(path_join(path, d))]
         for subj_dir_path in subjs_dir_path:
+            subj_id = subj_dir_path.split(os.sep)[-1]
             test_images_dir_path = os.path.join(subj_dir_path, 'test_split', 'test_images')
             training_images_dir_path = os.path.join(subj_dir_path, 'training_split', 'training_images')
             for input_path in [test_images_dir_path, training_images_dir_path]:
                 # test
                 if 'test' in input_path:
-                    sam(input_path=input_path, output_path=path_join(algnauts_result_path, 'test_result'))
+                    sam(input_path=input_path, output_path=os.path.join(algnauts_result_path, subj_id, 'test_result'))
                 # training
                 elif 'training' in input_path:
-                    sam(input_path=input_path, output_path=path_join(algnauts_result_path, 'training_result'))
+                    sam(input_path=input_path, output_path=os.path.join(algnauts_result_path, subj_id, 'training_result'))
 
     # ds004496
     elif path == ds004496_path:
