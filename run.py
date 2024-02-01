@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 
 # 合并两个路径
